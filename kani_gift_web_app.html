@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Kani (My Dearest Potato) 💜</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Dancing Script for romantic touches -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        btsDark: '#0f0c1b',
+                        btsCard: '#1a1429',
+                        btsCardHover: '#251b3a',
+                        btsPurple: '#9d4edd',
+                        btsLightPurple: '#c77dff',
+                        btsDeep: '#7b2cbf',
+                        btsPink: '#ff758f'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        script: ['Dancing Script', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #0f0c1b;
+            color: #f3e8ff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Floating background stars/hearts animation */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateY(-20px) rotate(10deg); opacity: 0.8; }
+        }
+
+        .floating-element {
+            position: absolute;
+            animation: floatSlow 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        /* Custom Glow & Glassmorphism */
+        .glass-card {
+            background: rgba(26, 20, 41, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(199, 125, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(123, 44, 191, 0.15);
+        }
+
+        .glow-purple {
+            box-shadow: 0 0 25px rgba(157, 78, 221, 0.4);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #e0aaff 0%, #c77dff 50%, #ff758f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f0c1b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7b2cbf;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9d4edd;
+        }
+
+        .memory-image-rotated {
+            object-fit: contain;
+            transform: rotate(-90deg) scale(1.78);
+        }
+    </style>
+</head>
+<body class="min-h-screen relative selection:bg-btsPurple selection:text-white">
+
+    <!-- Floating Background Decors -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="floating-element text-btsLightPurple text-xl top-10 left-[10%]" style="animation-delay: 0s;">💜</div>
+        <div class="floating-element text-btsPink text-2xl top-1/4 right-[15%]" style="animation-delay: 1.5s;">✨</div>
+        <div class="floating-element text-btsLightPurple text-lg top-1/2 left-[5%]" style="animation-delay: 3s;">💜</div>
+        <div class="floating-element text-btsPink text-xl top-3/4 right-[10%]" style="animation-delay: 2s;">⭐</div>
+        <div class="floating-element text-btsLightPurple text-2xl bottom-10 left-[20%]" style="animation-delay: 4s;">💜</div>
+    </div>
+
+    <!-- Main Wrapper -->
+    <div class="relative z-10 max-w-4xl mx-auto px-4 py-8 sm:py-12 flex flex-col items-center">
+
+        <!-- Header Title Section -->
+        <header class="text-center mb-10 w-full">
+            <div class="inline-block mb-3 px-4 py-1.5 rounded-full bg-btsCard border border-btsLightPurple/30 text-btsLightPurple text-xs sm:text-sm tracking-widest uppercase font-semibold animate-pulse">
+                💜 ARMY Love Dedicated 💜
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-gradient font-script mb-3">
+                Kani (my dearest potato)
+            </h1>
+            <p class="text-gray-300 text-sm sm:text-base max-w-xl mx-auto font-light">
+                A special universe created only for you, packed with all my heart, our countdown, and absolute devotion.
+            </p>
+        </header>
+
+        <!-- Live Countdown Section (Nov 8, 2025) -->
+        <section class="w-full glass-card rounded-3xl p-6 sm:p-8 mb-10 glow-purple text-center">
+            <div class="flex items-center justify-center gap-2 mb-2 text-btsLightPurple">
+                <i class="fa-solid fa-clock-rotate-left animate-spin" style="animation-duration: 10s;"></i>
+                <h2 class="text-lg sm:text-xl font-semibold tracking-wide">Our Beautiful Journey Together</h2>
+            </div>
+            <p class="text-xs sm:text-sm text-gray-400 mb-6">Counting every precious second since November 8, 2025</p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+                <div class="bg-btsDark/60 border border-btsLightPurple/20 rounded-2xl p-4 flex flex-col items-center justify-center">
+                    <span id="days" class="text-2xl sm:text-4xl font-bold text-white">0</span>
+                    <span class="text-[10px] sm:text-xs tracking-wider uppercase text-btsLightPurple mt-1 font-medium">Days</span>
+                </div>
+                <div class="bg-btsDark/60 border border-btsLightPurple/20 rounded-2xl p-4 flex flex-col items-center justify-center">
+                    <span id="hours" class="text-2xl sm:text-4xl font-bold text-white">0</span>
+                    <span class="text-[10px] sm:text-xs tracking-wider uppercase text-btsLightPurple mt-1 font-medium">Hours</span>
+                </div>
+                <div class="bg-btsDark/60 border border-btsLightPurple/20 rounded-2xl p-4 flex flex-col items-center justify-center">
+                    <span id="minutes" class="text-2xl sm:text-4xl font-bold text-white">0</span>
+                    <span class="text-[10px] sm:text-xs tracking-wider uppercase text-btsLightPurple mt-1 font-medium">Minutes</span>
+                </div>
+                <div class="bg-btsDark/60 border border-btsLightPurple/20 rounded-2xl p-4 flex flex-col items-center justify-center">
+                    <span id="seconds" class="text-2xl sm:text-4xl font-bold text-btsPink">0</span>
+                    <span class="text-[10px] sm:text-xs tracking-wider uppercase text-btsPink mt-1 font-medium">Seconds</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Music Vibe & YouTube Player -->
+        <section class="w-full glass-card rounded-3xl p-6 sm:p-8 mb-10">
+            <div class="flex items-center justify-between flex-wrap gap-4 mb-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-btsDeep flex items-center justify-center text-white text-lg">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-base sm:text-lg">Our Melody Vibe</h3>
+                        <p class="text-xs text-gray-400">Press play to set the romantic purple mood</p>
+                    </div>
+                </div>
+                <a href="https://www.youtube.com/watch?v=IpFX2vq8HKw" target="_blank" class="px-4 py-2 rounded-xl bg-gradient-to-r from-btsDeep to-btsPurple text-white text-xs sm:text-sm font-semibold hover:opacity-90 transition shadow-md flex items-center gap-2">
+                    <i class="fa-brands fa-youtube text-red-400 text-base"></i> Open on YouTube
+                </a>
+            </div>
+            
+            <!-- Responsive Embedded YouTube Player -->
+            <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-btsLightPurple/20 bg-black/40 shadow-inner">
+                <iframe class="w-full h-full absolute inset-0" src="https://www.youtube-nocookie.com/embed/IpFX2vq8HKw?autoplay=0&enablejsapi=1" title="Special Song for Kani" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Section 3: 5 Interactive Photo Slots -->
+        <section class="w-full glass-card rounded-3xl p-6 sm:p-8 mb-10">
+            <div class="text-center mb-6">
+                <h3 class="text-xl sm:text-2xl font-bold font-script text-gradient mb-1">Our Precious Memory Frames</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                <!-- Photo Slot 1 -->
+                <div class="group relative aspect-square rounded-2xl border-2 border-dashed border-btsLightPurple/40 bg-btsDark/50 overflow-hidden flex flex-col items-center justify-center cursor-pointer hover:border-btsLightPurple transition">
+                    <input type="file" accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer z-10" onchange="previewImage(event, 'preview-1', 'placeholder-1')">
+                    <div id="placeholder-1" class="hidden flex-col items-center text-center p-3">
+                        <i class="fa-solid fa-camera-retro text-btsLightPurple text-2xl mb-2 group-hover:scale-110 transition"></i>
+                        <span class="text-xs text-gray-400 font-medium">Slot 1</span>
+                    </div>
+                    <img id="preview-1" src="1.jpeg" class="absolute inset-0 w-full h-full object-cover" alt="Memory 1">
+                </div>
+                <!-- Photo Slot 2 -->
+                <div class="group relative aspect-square rounded-2xl border-2 border-dashed border-btsLightPurple/40 bg-btsDark/50 overflow-hidden flex flex-col items-center justify-center cursor-pointer hover:border-btsLightPurple transition">
+                    <input type="file" accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer z-10" onchange="previewImage(event, 'preview-2', 'placeholder-2')">
+                    <div id="placeholder-2" class="hidden flex-col items-center text-center p-3">
+                        <i class="fa-solid fa-heart text-btsPink text-2xl mb-2 group-hover:scale-110 transition"></i>
+                        <span class="text-xs text-gray-400 font-medium">Slot 2</span>
+                    </div>
+                    <img id="preview-2" src="2.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Memory 2">
+                </div>
+                <!-- Photo Slot 3 -->
+                <div class="group relative aspect-square rounded-2xl border-2 border-dashed border-btsLightPurple/40 bg-btsDark/50 overflow-hidden flex flex-col items-center justify-center cursor-pointer hover:border-btsLightPurple transition">
+                    <input type="file" accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer z-10" onchange="previewImage(event, 'preview-3', 'placeholder-3')">
+                    <div id="placeholder-3" class="hidden flex-col items-center text-center p-3">
+                        <i class="fa-solid fa-star text-btsLightPurple text-2xl mb-2 group-hover:scale-110 transition"></i>
+                        <span class="text-xs text-gray-400 font-medium">Slot 3</span>
+                    </div>
+                    <img id="preview-3" src="3.jpg" class="memory-image-rotated absolute inset-0 w-full h-full" alt="Memory 3">
+                </div>
+                <!-- Photo Slot 4 -->
+                <div class="group relative aspect-square rounded-2xl border-2 border-dashed border-btsLightPurple/40 bg-btsDark/50 overflow-hidden flex flex-col items-center justify-center cursor-pointer hover:border-btsLightPurple transition">
+                    <input type="file" accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer z-10" onchange="previewImage(event, 'preview-4', 'placeholder-4')">
+                    <div id="placeholder-4" class="hidden flex-col items-center text-center p-3">
+                        <i class="fa-solid fa-face-smile-beam text-btsPink text-2xl mb-2 group-hover:scale-110 transition"></i>
+                        <span class="text-xs text-gray-400 font-medium">Slot 4</span>
+                    </div>
+                    <img id="preview-4" src="4.jpg" class="memory-image-rotated absolute inset-0 w-full h-full" alt="Memory 4">
+                </div>
+                <!-- Photo Slot 5 -->
+                <div class="group relative aspect-square rounded-2xl border-2 border-dashed border-btsLightPurple/40 bg-btsDark/50 overflow-hidden flex flex-col items-center justify-center cursor-pointer hover:border-btsLightPurple transition sm:col-span-3 md:col-span-1">
+                    <input type="file" accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer z-10" onchange="previewImage(event, 'preview-5', 'placeholder-5')">
+                    <div id="placeholder-5" class="hidden flex-col items-center text-center p-3">
+                        <i class="fa-solid fa-gem text-btsLightPurple text-2xl mb-2 group-hover:scale-110 transition"></i>
+                        <span class="text-xs text-gray-400 font-medium">Slot 5</span>
+                    </div>
+                    <img id="preview-5" src="5.jpg" class="memory-image-rotated absolute inset-0 w-full h-full" alt="Memory 5">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Heartfelt Message & Apology -->
+        <section class="w-full glass-card rounded-3xl p-6 sm:p-10 mb-10 relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 text-btsPurple/10 text-9xl pointer-events-none font-bold">
+                💜
+            </div>
+
+            <h3 class="text-2xl sm:text-3xl font-bold font-script text-gradient mb-6 text-center">A Letter From My Soul</h3>
+
+            <div class="space-y-4 text-gray-200 text-base sm:text-lg leading-relaxed font-light">
+                <p class="font-medium text-btsLightPurple">Kani I need to say you something...</p>
+                
+                <p>You are the gem who made my life brighter</p>
+                
+                <p>You are the one who makes me feel comfortable always</p>
+                
+                <p>You are the one who deserves my 100% efforts...</p>
+                
+                <!-- Highlighted Apology & Request Section -->
+                <div class="my-6 p-6 rounded-2xl bg-gradient-to-r from-btsDeep/30 to-btsPurple/20 border-l-4 border-btsPink shadow-lg">
+                    <p class="font-semibold text-white tracking-wide leading-relaxed">
+                        You are the one who deserves the first and last <span class="px-2 py-0.5 rounded bg-btsPink/30 text-btsPink font-bold">di</span> from me and I hadn't put this much as efforts to anyone... so Pls I beg you to forgive me on all of my mistakes and we will fix every problem together ok...
+                    </p>
+                </div>
+
+                <p>And I need to add this you are the first person to deserve my 100% love, care, obsession, etc...</p>
+                
+                <p class="italic text-gray-300 bg-btsDark/40 p-4 rounded-xl border border-btsLightPurple/10">
+                    "I care your health and fitness more than mine.. for e.g. If I complete a 10 km run it does not feel much to me but If you did a 25 mins or 30 mins zumba it feels great to me..."
+                </p>
+            </div>
+        
+
+        <!-- Final Signature -->
+        <footer class="text-center pb-6">
+            <p class="text-xs tracking-widest uppercase text-gray-400 mb-1">Forever Yours</p>
+            <p class="text-2xl font-bold font-script text-gradient">Kaniholic</p>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // 1. Live Countdown Timer from Nov 8, 2025
+        const startDate = new Date("2025-11-08T00:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = now - startDate;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerText = days.toLocaleString();
+                document.getElementById("hours").innerText = hours;
+                document.getElementById("minutes").innerText = minutes;
+                document.getElementById("seconds").innerText = seconds;
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // 2. Photo Upload Preview Handler
+        function previewImage(event, previewId, placeholderId) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.getElementById(previewId);
+                    const placeholder = document.getElementById(placeholderId);
+                    preview.src = e.target.result;
+                    preview.classList.remove('hidden');
+                    placeholder.classList.add('hidden');
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // 3. Copy Link Helper
+        function copyCurrentURL() {
+            const dummy = document.createElement('input');
+            document.body.appendChild(dummy);
+            dummy.value = window.location.href;
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            
+            const feedback = document.getElementById('copy-feedback');
+            feedback.classList.remove('hidden');
+            setTimeout(() => {
+                feedback.classList.add('hidden');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
